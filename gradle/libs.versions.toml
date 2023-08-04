@@ -1,0 +1,91 @@
+[versions]
+kotlin = "1.8.21"
+gradle = "8.0.2"
+desugaring = "2.0.3"
+
+# androidx
+androidx-core = "1.10.1"
+androidx-lifecycle = "2.6.1"
+androidx-multidex = "2.0.1"
+androidx-datastore = "1.0.0"
+
+# google
+google-playservices = "18.2.0"
+google-hilt = "2.44.2"
+
+# compose
+compose-bom = "2023.05.01"
+compose-activity = "1.7.2"
+compose-compiler = "1.4.7"
+compose-material = "1.1.1"
+compose-navigation = "2.5.3"
+
+# hilt
+hilt-ext = "1.0.0"
+hilt-navigation = "1.0.0"
+
+[libraries]
+desugaring = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugaring" }
+androidx-core = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core" }
+androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
+androidx-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
+androidx-multidex = { group = "androidx.multidex", name = "multidex", version.ref = "androidx-multidex" }
+androidx-datastore = { group = "androidx.datastore", name = "datastore", version.ref = "androidx-datastore" }
+androidx-datastore-core = { group = "androidx.datastore", name = "datastore-core", version.ref = "androidx-datastore" }
+androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "androidx-datastore" }
+
+# hilt
+hilt-navigation = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hilt-navigation" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "google-hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "google-hilt" }
+
+# compose
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "compose-activity" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "compose-material" }
+compose-material3-window = { group = "androidx.compose.material3", name = "material3-window-size-class", version.ref = "compose-material" }
+compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "compose-navigation" }
+compose-ui = { group = "androidx.compose.ui", name = "ui" }
+compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout" }
+compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
+compose-ui-tooling-debug = { group = "androidx.compose.ui", name = "ui-tooling" }
+compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+
+[bundles]
+androidx-compose = [
+    "compose.activity",
+    "compose.material3",
+    "compose.material3.window",
+    "compose.navigation",
+    "compose.ui",
+    "compose.ui.graphics",
+    "compose.ui.tooling.preview",
+    "compose.foundation",
+    "compose.foundation.layout",
+    "compose.runtime"
+]
+androidx-compose-debug = [
+    "compose.ui.tooling.debug",
+    "compose.ui.test.manifest"
+]
+androidx-datastore = [
+    "androidx.datastore",
+    "androidx.datastore.core",
+    "androidx.datastore.preferences"
+]
+androidx-core = [
+    "androidx.core",
+    "androidx.lifecycle",
+    "androidx.viewmodel",
+    "androidx.multidex"
+]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "gradle" }
+android-kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+google-hilt = { id = "com.google.dagger.hilt.android", version.ref = "google-hilt" }
+

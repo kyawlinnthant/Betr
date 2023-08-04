@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Betr</string>
+    <string name="facebook">Facebook</string>
+    <string name="messenger">Messenger</string>
+    <string name="youtube">Youtube</string>
+    <string name="chrome">Chrome</string>
+    <string name="setting">Settings</string>
+    <string name="update">Updates</string>
+    <string name="updated_headline">Updated Software</string>
+    <string name="updated_support">Updated Software enabled changes text color</string>
+</resources>
