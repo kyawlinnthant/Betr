@@ -14,3 +14,4 @@ App is structured with 2 screens, Setting and Updates Screens.
 - Datastore Preferences [Datastore Preferences](https://developer.android.com/topic/libraries/architecture/datastore)
 - MVVM [Recommended Android Architecture](https://developer.android.com/topic/architecture)
 
+//
