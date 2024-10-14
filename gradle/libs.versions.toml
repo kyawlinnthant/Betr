@@ -1,6 +1,6 @@
 [versions]
 kotlin = "1.8.21"
-gradle = "8.0.2"
+gradle = "8.7.1"
 desugaring = "2.0.3"
 
 # androidx
